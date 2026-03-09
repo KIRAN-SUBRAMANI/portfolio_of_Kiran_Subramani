@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // add options here only if you need them
+  allowedDevOrigins: [
+    "http://localhost:3000",
+    "http://192.168.30.163:3000"
+  ],
 };
 
 export default nextConfig;
