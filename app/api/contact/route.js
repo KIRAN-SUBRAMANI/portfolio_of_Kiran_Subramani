@@ -1,9 +1,7 @@
 import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/validators/contact";
-import { verifyRecaptcha } from "@/lib/validators/recaptcha";
 import { rateLimit } from "@/lib/rate-limit/basic";
 import { sendContactEmail } from "@/lib/mailer/nodemailer";
-import { sendTelegramMessage } from "@/lib/mailer/telegram";
 
 function getClientIp(req) {
   const forwarded = req.headers.get("x-forwarded-for");
@@ -15,10 +13,10 @@ export async function POST(req) {
   try {
     const ip = getClientIp(req);
 
-    const allowed = rateLimit(ip, { limit: 5, windowMs: 60_000 });
-    if (!allowed.ok) {
+    const rl = rateLimit(ip, { limit: 5, windowMs: 60_000 });
+    if (!rl.ok) {
       return NextResponse.json(
-        { error: "Too many requests. Please try again shortly." },
+        { error: "Too many requests. Please try again in a minute." },
         { status: 429 }
       );
     }
@@ -33,25 +31,20 @@ export async function POST(req) {
       );
     }
 
-    const { name, email, message, captchaToken } = parsed.data;
-
-    const captchaOk = await verifyRecaptcha(captchaToken);
-    if (!captchaOk) {
-      return NextResponse.json(
-        { error: "Captcha verification failed." },
-        { status: 400 }
-      );
-    }
-
-    await sendContactEmail({ name, email, message });
-    await sendTelegramMessage({ name, email, message });
+    await sendContactEmail(parsed.data);
 
     return NextResponse.json({ success: true });
   } catch (error) {
-  console.error("CONTACT API ERROR:", error);
-  return NextResponse.json(
-    { error: "Server error. Please try again later." },
-    { status: 500 }
-  );
-}
+    console.error("CONTACT API ERROR:", error);
+
+    const message =
+      error?.message ||
+      error?.response ||
+      "Server error. Please try again later.";
+
+    return NextResponse.json(
+      { error: message },
+      { status: 500 }
+    );
+  }
 }
