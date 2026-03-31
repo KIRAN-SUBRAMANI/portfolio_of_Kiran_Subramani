@@ -2,47 +2,52 @@ import Container from "./Container";
 
 const projects = [
   {
-    title: "Good Dog — Responsive Web App",
-    tag: "Performance + UX",
-    period: "Jun 2025 – Aug 2025",
+    title: "Good Dog — Responsive Web Platform",
+    tag: "Frontend Systems + Performance",
     signals: ["Engagement +30%", "Load time −40%", "Reusable UI"],
     bullets: [
-      "Built responsive Next.js + React app with clean component architecture.",
-      "Improved perceived speed via caching + lazy loading patterns.",
-      "Shipped reusable UI primitives to reduce regressions & speed iteration.",
+      "Built a responsive web platform with Next.js and React using reusable component architecture.",
+      "Improved perceived performance through caching, lazy loading, and cleaner rendering flows.",
+      "Created reusable UI primitives to speed up iteration and reduce regressions across screens.",
     ],
-    stack: ["Next.js", "React", "Context API", "Performance"],
+    stack: ["Next.js", "React", "UI Systems", "Performance"],
     repo: "#",
     live: "#",
   },
   {
     title: "Astrology Portfolio Platform",
-    tag: "Cloud + Observability",
-    period: "Jun 2024 – Jan 2025",
-    signals: ["Latency −40%", "2× load", "Monitoring dashboards"],
+    tag: "Cloud Deployment + Monitoring",
+    signals: ["Latency −40%", "2× load", "Dashboards"],
     bullets: [
-      "Built Flask services on cloud VMs and containerized with Docker.",
-      "Scaled using modular service separation & clean interfaces.",
-      "Added Prometheus + Grafana dashboards to track system health.",
+      "Built and deployed cloud-hosted Flask services with Docker-based containerization.",
+      "Improved scalability with modular service boundaries and production-friendly deployment workflows.",
+      "Added observability with Prometheus and Grafana to monitor uptime and system health.",
     ],
-    stack: ["Flask", "GCP", "Docker", "Prometheus", "Grafana"],
+    stack: ["Flask", "Cloud", "Docker", "Prometheus", "Grafana"],
     repo: "#",
     live: "#",
   },
   {
     title: "Full-Stack MERN E-Commerce",
-    tag: "Delivery + Scale",
-    period: "Feb 2023 – Apr 2023",
+    tag: "APIs + Delivery",
     signals: ["REST APIs", "Auth + Roles", "Checkout flow"],
     bullets: [
-      "Implemented catalog, cart, checkout, and admin workflows.",
-      "Designed REST endpoints + MongoDB schema for scalable CRUD.",
-      "Improved UX with strong loading/error states and clean UI flows.",
+      "Implemented catalog, cart, checkout, and admin workflows with a full-stack MERN architecture.",
+      "Designed REST APIs and MongoDB schema to support scalable CRUD operations and role-based access.",
+      "Improved UX with stronger loading states, error handling, and cleaner end-to-end user flows.",
     ],
     stack: ["MongoDB", "Express", "React", "Node.js"],
     repo: "#",
     live: "#",
   },
+];
+
+const PROJECT_TAGS = [
+  "Performance",
+  "Backend APIs",
+  "Cloud",
+  "Observability",
+  "System Design",
 ];
 
 function Pill({ children }) {
@@ -84,13 +89,11 @@ function LinkBtn({ href, children, solid = false }) {
 function ProjectCard({ p, i }) {
   return (
     <article
-      className={`project-stack-card relative rounded-[26px] border border-slate-200/70 bg-white/70 backdrop-blur-xl shadow-[0_18px_60px_rgba(15,23,42,0.10)] overflow-hidden`}
+      className="project-stack-card relative rounded-[26px] border border-slate-200/70 bg-white/70 backdrop-blur-xl shadow-[0_18px_60px_rgba(15,23,42,0.10)] overflow-hidden"
       style={{
-        // per-card stacking offset (CSS var used by globals.css)
         "--stackY": `${i * 22}px`,
       }}
     >
-      {/* soft glow */}
       <div className="pointer-events-none absolute inset-0 opacity-80 project-glow" />
 
       <div className="relative p-6 sm:p-7">
@@ -101,6 +104,7 @@ function ProjectCard({ p, i }) {
             </span>
             <span className="text-xs font-bold text-slate-500">{p.period}</span>
           </div>
+
           <div className="flex gap-2">
             <LinkBtn href={p.repo} solid>
               Repo
@@ -143,40 +147,41 @@ export default function Projects() {
     <section id="projects" className="relative py-16 sm:py-20">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 items-start">
-          {/* LEFT (static) */}
+          {/* LEFT */}
           <div className="lg:sticky lg:top-24">
             <div className="text-xs tracking-[0.35em] font-extrabold text-slate-500">
               PROJECTS
             </div>
+
             <h2 className="mt-3 text-4xl sm:text-5xl font-black tracking-tight text-slate-900">
-              Proof of execution.
+              Built with engineering discipline.
             </h2>
+
             <p className="mt-2 text-lg font-semibold text-slate-600">
-              Real builds. Measurable results. Clean delivery.
+              Real systems, cleaner architecture, measurable outcomes.
             </p>
 
             <p className="mt-6 text-slate-600 leading-relaxed">
-              These projects reflect how I approach engineering: clear architecture,
-              performance mindset, and production-ready execution.
+              These projects reflect how I build software: performance-minded,
+              production-aware, and focused on clear system design across
+              frontend, backend, and cloud deployment.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              {["Performance", "System Design", "Cloud", "UX", "Observability"].map(
-                (x) => (
-                  <Pill key={x}>{x}</Pill>
-                )
-              )}
+              {PROJECT_TAGS.map((x) => (
+                <Pill key={x}>{x}</Pill>
+              ))}
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <LinkBtn href="#" solid>
+              <LinkBtn href="https://github.com/KIRAN-SUBRAMANI" solid>
                 View GitHub
               </LinkBtn>
-              <LinkBtn href="#">Download Resume</LinkBtn>
+              <LinkBtn href="/Kiran Subramani.pdf">Download Resume</LinkBtn>
             </div>
           </div>
 
-          {/* RIGHT (stack + sticky cards) */}
+          {/* RIGHT */}
           <div className="project-stack-wrap">
             {projects.map((p, i) => (
               <div key={p.title} className="project-stack-item">

@@ -136,7 +136,7 @@ body {
   flex-wrap: nowrap;
   gap: 28px;
   width: max-content;
-  animation: scrollLeft 22s linear infinite;
+  animation: scrollLeft 62s linear infinite;
 }
 
 .skill-marquee-track:hover {

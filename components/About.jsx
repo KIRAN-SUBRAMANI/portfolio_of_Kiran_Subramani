@@ -2,38 +2,40 @@ import Container from "./Container";
 
 const METRICS = [
   {
-    label: "Latency",
-    value: "200ms → 150ms",
-    desc: "API optimization",
+    label: "Performance",
+    value: "+35%",
+    desc: "API throughput improvement",
     accent: "from-blue-500/15 to-indigo-500/10",
   },
   {
-    label: "Speed",
-    value: "+40%",
-    desc: "Caching + lazy loading",
+    label: "Automation",
+    value: "40%",
+    desc: "manual effort reduction",
     accent: "from-emerald-500/15 to-teal-500/10",
   },
   {
-    label: "Scale",
-    value: "10k+ users",
-    desc: "Load-tested backend",
+    label: "Infra",
+    value: "-25%",
+    desc: "cost reduction at scale",
     accent: "from-violet-500/15 to-fuchsia-500/10",
   },
   {
-    label: "Impact",
-    value: "280 hrs saved",
-    desc: "Workflow automation",
+    label: "Reliability",
+    value: "-30%",
+    desc: "lower MTTR with CI/CD",
     accent: "from-orange-500/15 to-rose-500/10",
   },
 ];
 
 const FOCUS = [
-  "Backend APIs",
-  "Database design",
-  "Performance tuning",
+  "Microservices",
+  "RAG Systems",
+  "Kafka Pipelines",
+  "Spring Boot",
+  "AWS + Kubernetes",
+  "Performance Engineering",
+  "Distributed Systems",
   "CI/CD",
-  "Cloud deployment",
-  "Observability",
 ];
 
 export default function About() {
@@ -57,26 +59,27 @@ export default function About() {
 
               <h2 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
                 I build{" "}
-                <span className="text-slate-900">production-ready</span>{" "}
-                software that{" "}
+                <span className="text-slate-900">production-grade</span>{" "}
+                software systems that{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-600 bg-clip-text text-transparent">
-                  scales and performs
+                  scale, automate, and perform
                 </span>
                 .
               </h2>
 
               <p className="mt-5 text-lg text-slate-600 leading-relaxed">
-                I’m a SWE-focused graduate student with hands-on experience
-                building full-stack and cloud-native systems. I care about
-                measurable outcomes: lower latency, faster load times, reliable
-                deployments, and clean UX.
+                I’m a Software Engineer with 4+ years of experience building
+                cloud-native applications across fintech and SaaS. My work spans
+                microservices, event-driven systems, and AI-powered workflows —
+                with a strong focus on reliability, measurable performance, and
+                production-ready architecture.
               </p>
             </div>
 
             <div className="flex lg:justify-end">
               <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-sm text-slate-700 shadow-sm backdrop-blur">
                 <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                Open to SWE New Grad (US)
+                Open to Backend / AI Systems roles
               </div>
             </div>
           </div>
@@ -117,24 +120,24 @@ export default function About() {
                   HOW I WORK
                 </div>
                 <h3 className="mt-2 text-2xl font-extrabold text-slate-900">
-                  Simple process. Strong outcomes.
+                  Build for scale. Ship for production.
                 </h3>
 
                 <div className="mt-6 space-y-6">
                   <Step
                     n="01"
-                    title="Define the problem"
-                    desc="Clarify requirements, constraints, and what success looks like (metrics/SLOs)."
+                    title="Architect with intent"
+                    desc="Design clean service boundaries, event flows, and data models around scale, latency, and maintainability."
                   />
                   <Step
                     n="02"
-                    title="Design the system"
-                    desc="Pick the simplest architecture that scales: data model, API contracts, boundaries."
+                    title="Engineer for resilience"
+                    desc="Build reliable systems with microservices, caching, async processing, CI/CD, and cloud-native deployment patterns."
                   />
                   <Step
                     n="03"
-                    title="Ship + iterate"
-                    desc="Deploy with CI/CD, monitor, learn from real usage, and improve quickly."
+                    title="Measure and improve"
+                    desc="Track performance, reliability, and operational outcomes — then iterate using real production signals."
                   />
                 </div>
               </div>
@@ -149,7 +152,7 @@ export default function About() {
                   FOCUS AREAS
                 </div>
                 <h3 className="mt-2 text-2xl font-extrabold text-slate-900">
-                  SWE signals recruiters care about
+                  Core systems I like building
                 </h3>
 
                 <div className="mt-5 flex flex-wrap gap-2">
@@ -170,11 +173,13 @@ export default function About() {
                   <div className="mt-3 flex items-start gap-3">
                     <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500" />
                     <p className="text-slate-700 leading-relaxed">
-                      <span className="font-bold">Now:</span> building end-to-end
-                      projects with performance & reliability in mind.
+                      <span className="font-bold">Now:</span> building scalable
+                      backend systems, RAG workflows, and real-time data
+                      pipelines across cloud-native environments.
                       <br />
-                      <span className="font-bold">Next:</span> polishing case
-                      studies + shipping production deployments with monitoring.
+                      <span className="font-bold">Next:</span> deepening AI
+                      systems engineering with stronger production monitoring,
+                      distributed infrastructure, and case-study driven builds.
                     </p>
                   </div>
                 </div>
@@ -197,7 +202,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Bottom subtle divider */}
           <div className="mt-12 h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
         </div>
       </Container>

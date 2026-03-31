@@ -1,23 +1,14 @@
-// components/Education.jsx
 import Container from "./Container";
 
 const education = [
   {
     range: "2024 - 2025",
-    degree: "MASTER'S DEGREE",
-    school: "Wilmington University",
+    degree: "M.S. INFORMATION SYSTEM TECHNOLOGIES",
+    school: "Wilmington University • USA",
+    subtitle: "Specialization: Cloud Systems & AI Engineering",
     gpaLabel: "GPA",
     gpaValue: "3.7/4.0",
     logoSrc: "/wilmington.png",
-  },
-  {
-    range: "2019 - 2023",
-    degree: "BACHELOR'S DEGREE",
-    school: "Gopalan College of Engineering and Management",
-    subtitle: "Affiliated to Visvesvaraya Technological University (VTU)",
-    gpaLabel: "CGPA",
-    gpaValue: "8.05/10",
-    logoSrc: "/gcem.png",
   },
 ];
 
@@ -36,8 +27,8 @@ export default function Education() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          
-          {/* LEFT SIDE (UNCHANGED) */}
+
+          {/* LEFT SIDE */}
           <div className="relative rounded-[34px] border border-slate-200/70 bg-white/55 backdrop-blur overflow-hidden shadow-[0_26px_80px_rgba(15,23,42,0.10)] min-h-[420px]">
             <div className="absolute inset-0 opacity-[0.18] bg-[radial-gradient(circle,rgba(15,23,42,0.16)_1px,transparent_1px)] [background-size:18px_18px]" />
             <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-emerald-400/10" />
@@ -48,11 +39,11 @@ export default function Education() {
               </div>
 
               <div className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-                Education that supports real engineering systems.
+                Building a strong foundation in scalable systems and AI engineering.
               </div>
 
               <div className="mt-4 text-slate-600 text-lg">
-                Systems • Performance • Reliability • Architecture
+                Distributed Systems • Cloud • AI Systems • Performance Engineering
               </div>
 
               <div className="mt-8 rounded-2xl bg-white/75 border border-slate-200/70 p-6">
@@ -60,14 +51,14 @@ export default function Education() {
                   Core Focus Areas
                 </div>
                 <div className="mt-2 text-slate-600">
-                  Backend systems, scalable APIs, full-stack architecture, and production-ready engineering practices.
+                  Microservices architecture, distributed systems, cloud-native applications, and AI-powered workflows including RAG and real-time data pipelines.
                 </div>
               </div>
             </div>
           </div>
 
-          {/* RIGHT SIDE */}
-          <div className="space-y-8">
+          {/* RIGHT SIDE (CENTERED SINGLE CARD) */}
+          <div className="space-y-8 max-w-xl mx-auto">
             {education.map((item) => (
               <div
                 key={item.range}
@@ -82,7 +73,6 @@ export default function Education() {
                     {item.range}
                   </div>
 
-                  {/* 🔥 MOBILE FIXED LAYOUT */}
                   <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
 
                     {/* LEFT CONTENT */}
@@ -109,31 +99,30 @@ export default function Education() {
                           {item.school}
                         </div>
 
-                        {item.subtitle && (
-                          <div className="mt-1 text-white/55 text-sm leading-snug">
-                            {item.subtitle}
-                          </div>
-                        )}
+                        <div className="mt-1 text-white/55 text-sm">
+                          {item.subtitle}
+                        </div>
 
                         <div className="mt-2 text-[#F3B21A] font-extrabold text-lg">
                           {item.gpaLabel}: {item.gpaValue}
                         </div>
+
+                        {/* Extra highlight */}
+                        <div className="mt-2 text-white/50 text-sm">
+                          Focus: Distributed Systems • Cloud • AI Systems
+                        </div>
                       </div>
                     </div>
 
-                    {/* LOGO SECTION */}
+                    {/* LOGO */}
                     <div className="w-full md:w-auto flex justify-center md:justify-end">
                       <div className="h-[110px] w-[170px] md:h-[120px] md:w-[140px] rounded-xl bg-white shadow-[0_18px_50px_rgba(0,0,0,0.30)] overflow-hidden flex items-center justify-center">
-<img
-  src={item.logoSrc}
-  alt={`${item.school} logo`}
-  loading="lazy"
-  className={
-    item.school.includes("Gopalan")
-      ? "h-full w-full object-contain scale-[2.15]" // ✅ fills more without cover
-      : "h-full w-full object-contain"
-  }
-/>
+                        <img
+                          src={item.logoSrc}
+                          alt={`${item.school} logo`}
+                          loading="lazy"
+                          className="h-full w-full object-contain"
+                        />
                       </div>
                     </div>
 

@@ -1,32 +1,58 @@
 import Container from "./Container";
 import {
   SiReact,
-  SiNextdotjs,
+  SiAngular,
+  SiJavascript,
   SiTypescript,
   SiNodedotjs,
-  SiFastapi,
-  SiPostgresql,
-  SiMongodb,
-  SiDocker,
-  SiAmazon,
+  SiSpringboot,
   SiPython,
+  SiCplusplus,
+  SiPostgresql,
+  SiMysql,
+  SiMongodb,
   SiRedis,
+  SiDocker,
+  SiKubernetes,
+  SiJenkins,
   SiGithub,
+  SiApachekafka,
+  SiAmazon,
 } from "react-icons/si";
 
 const skills = [
-  { name: "React", icon: SiReact, color: "#61DAFB" },
-  { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
-  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-  { name: "Node.js", icon: SiNodedotjs, color: "#3C873A" },
-  { name: "FastAPI", icon: SiFastapi, color: "#009688" },
-  { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
-  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-  { name: "Docker", icon: SiDocker, color: "#2496ED" },
-  { name: "AWS", icon: SiAmazon, color: "#FF9900" },
+  { name: "Java", short: "J", color: "#EA2D2E" },
   { name: "Python", icon: SiPython, color: "#3776AB" },
+  { name: "C++", icon: SiCplusplus, color: "#00599C" },
+  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "SQL", short: "SQL", color: "#6B7280" },
+
+  { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#3C873A" },
+  { name: "React", icon: SiReact, color: "#61DAFB" },
+  { name: "Angular", icon: SiAngular, color: "#DD0031" },
+
+  { name: "Microservices", short: "MS", color: "#0F172A" },
+  { name: "REST APIs", short: "API", color: "#2563EB" },
+  { name: "Distributed Systems", short: "DS", color: "#7C3AED" },
+
+  { name: "RAG", short: "RAG", color: "#10B981" },
+  { name: "LLMs", short: "LLM", color: "#8B5CF6" },
+  { name: "Prompt Eng", short: "PE", color: "#F59E0B" },
+
+  { name: "Kafka", icon: SiApachekafka, color: "#FFFFFF" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+  { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
   { name: "Redis", icon: SiRedis, color: "#DC382D" },
+
+  { name: "AWS", icon: SiAmazon, color: "#FF9900" },
+  { name: "Docker", icon: SiDocker, color: "#2496ED" },
+  { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
+  { name: "Jenkins", icon: SiJenkins, color: "#D24939" },
   { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
+  { name: "CI/CD", short: "CI", color: "#0EA5E9" },
 ];
 
 export default function Skills() {
@@ -40,23 +66,31 @@ export default function Skills() {
           <div className="skill-title-line" />
         </div>
 
-        {/* Horizontal Infinite Swipe */}
+        {/* Marquee */}
         <div className="skill-marquee-wrap">
           <div className="skill-marquee-track">
             {[...skills, ...skills].map((s, i) => {
               const Icon = s.icon;
+
               return (
-                <div className="skill-card" key={i}>
+                <div className="skill-card" key={`${s.name}-${i}`}>
                   <div className="skill-card-inner">
                     <div
-                      className="skill-icon"
+                      className="skill-icon flex items-center justify-center"
                       style={{
                         color: s.color,
                         filter: `drop-shadow(0 8px 20px ${s.color}55)`,
                       }}
                     >
-                      <Icon />
+                      {Icon ? (
+                        <Icon />
+                      ) : (
+                        <span className="text-sm font-bold">
+                          {s.short}
+                        </span>
+                      )}
                     </div>
+
                     <div className="skill-name">{s.name}</div>
                   </div>
                 </div>
