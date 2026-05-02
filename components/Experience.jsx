@@ -2,38 +2,46 @@ import Container from "./Container";
 
 const experiences = [
   {
-    role: "Software Engineer",
-    company: "Intuit • USA",
-    period: "Jan 2026 – Present",
-    tag: "AI + Systems Focus",
-    signals: ["35% ↑ API throughput", "AI + RAG systems", "25% ↓ infra cost"],
+    role: "Front-End Developer",
+    company: "YosiInnovation Private Ltd • IISc, India",
+    period: "Jun 2023 – Nov 2023",
+    tag: "React + IoT Focus",
+    signals: ["280 hrs ↓ manual entry", "17→6 UI errors/build", "<0.25s obstacle latency"],
     bullets: [
-      "Built high-scale fintech microservices, improving API throughput by 35%.",
-      "Shipped a RAG-powered system for financial query resolution, reducing manual work by 40%.",
-      "Developed AI anomaly detection, improving data reliability and compliance.",
-      "Designed real-time event pipelines with Kafka + AWS for low-latency processing.",
-      "Reduced latency using Redis caching + async processing for faster user responses.",
-      "Scaled infrastructure with Docker + Kubernetes, cutting costs by 25%.",
-      "Automated delivery using CI/CD pipelines, reducing downtime and release friction.",
+      "Promoted from intern after delivering three deployable IoT prototypes for MedTech incubation programs at IISc.",
+      "Built a React + TypeScript vendor-management portal that automated procurement workflows, cutting manual data entry by 280 hours per quarter and synchronizing information across four departments.",
+      "Designed reusable React components that reduced UI validation errors from 17 to 6 per build cycle, improving release reliability.",
+      "Engineered a Smart Walking Stick integrating GPS, ESP32, and cloud analytics to assist visually impaired users, achieving obstacle-detection latency under 0.25 seconds during field testing.",
     ],
-    stack: ["Java", "Spring Boot", "Python", "RAG", "LLMs", "Kafka", "AWS", "Redis", "Docker", "Kubernetes", "CI/CD"],
+    stack: ["React.js", "TypeScript", "ESP32", "GPS", "Cloud Analytics", "IoT"],
   },
   {
-    role: "Software Developer",
-    company: "Zoho • India",
-    period: "May 2021 – Dec 2023",
-    tag: "Backend + Systems",
-    signals: ["Backend systems at scale", "Event-driven architecture", "Secure SaaS platforms"],
+    role: "Front-End Developer Intern",
+    company: "YosiInnovation Private Ltd • IISc, India",
+    period: "Sep 2022 – May 2023",
+    tag: "Security + Audit Automation",
+    signals: ["79s ↓ per audit record", "50 reports in <90 min", "35 compliance deviations found"],
     bullets: [
-      "Built scalable backend services using Java, Spring Boot, and REST APIs, powering enterprise SaaS applications for global users",
-      "Developed interactive Angular UI systems, improving user engagement and reducing latency through optimized rendering.",
-      "Refactored legacy modules using C++ (multithreading), improving memory efficiency and reducing system crashes.",
-      "Implemented secure authentication systems (JWT, OAuth2) for multi-tenant platforms, ensuring data privacy and compliance.",
-      "Engineered real-time data pipelines using Apache Kafka, enabling faster event processing and system consistency.",
-      "Optimized SQL queries and database schemas (MySQL, PostgreSQL), reducing query execution time by ~20%.",
-      "Automated CI/CD pipelines using Jenkins and Docker, improving deployment speed and reliability.",
+      "Designed an automated VB.NET + Excel risk-assessment system for critical banking infrastructure, reducing audit cycle time by 79 seconds per record and improving throughput across 2,000 records per audit.",
+      "Created an interactive UI workflow to rank high-risk vulnerabilities, processing 50 reports in under 90 minutes instead of 150, improving review turnaround.",
+      "Conducted security-control gap analyses across 12 systems, documenting 35 compliance deviations and drafting remediation plans.",
+      "Delivered a live prototype demo to 50 Ernst & Young executives, securing adoption of the audit-automation methodology within two partner institutions.",
     ],
-    stack: ["Java", "Spring Boot", "Angular", "Apache Kafka", "Jenkins", "Docker", "MySQL", "PostgreSQL", "JWT", "OAuth2", "C++"]
+    stack: ["VB.NET", "Excel", "UI/UX", "Security Analysis", "Compliance"],
+  },
+  {
+    role: "Full Stack Developer Intern",
+    company: "Greet Labs Pvt Ltd • Bengaluru, India",
+    period: "Feb 2023 – Apr 2023",
+    tag: "MERN + DevOps",
+    signals: ["40% ↓ unauthorized access", "200ms→150ms API latency", "100% on-time delivery"],
+    bullets: [
+      "Implemented and deployed a full-stack MERN e-commerce platform that accelerated checkout speed by 79 seconds per transaction and improved user engagement across 1,500+ sessions.",
+      "Strengthened backend security by implementing RBAC and JWT-based authentication, reducing unauthorized access attempts by 40% while ensuring encrypted, authorized data exchange.",
+      "Refactored MongoDB queries and Node.js APIs, cutting average API latency from 200ms to 150ms and enhancing scalability under load testing with 10k+ concurrent users.",
+      "Automated CI/CD workflows via GitHub Actions and Jenkins, achieving 100% on-time sprint delivery and reducing manual deployment effort by 3 hours per cycle.",
+    ],
+    stack: ["MongoDB", "Express", "React.js", "Node.js", "JWT", "RBAC", "GitHub Actions", "Jenkins", "Docker"],
   },
 ];
 
@@ -118,12 +126,12 @@ export default function Experience() {
               Results-driven engineering work.
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              Highlights emphasize measurable outcomes: performance, scale, security,
-              delivery, and clean UI systems.
+              Highlights emphasize measurable outcomes: performance, security,
+              automation, and clean UI systems.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              {["Performance", "Automation", "Security", "UI Systems", "Cloud"].map(
+              {["React", "Full Stack", "IoT", "Security", "DevOps"].map(
                 (x) => (
                   <Pill key={x}>{x}</Pill>
                 )
