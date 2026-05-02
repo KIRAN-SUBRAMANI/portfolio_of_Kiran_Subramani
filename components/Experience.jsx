@@ -3,7 +3,7 @@ import Container from "./Container";
 const experiences = [
   {
     role: "Front-End Developer",
-    company: "YosiInnovation Private Ltd • IISc, India",
+    company: "Yosi Innovation Private Ltd • IISc, India",
     period: "Jun 2023 – Nov 2023",
     tag: "React + IoT Focus",
     signals: ["280 hrs ↓ manual entry", "17→6 UI errors/build", "<0.25s obstacle latency"],
@@ -17,7 +17,7 @@ const experiences = [
   },
   {
     role: "Front-End Developer Intern",
-    company: "YosiInnovation Private Ltd • IISc, India",
+    company: "Yosi Innovation Private Ltd • IISc, India",
     period: "Sep 2022 – May 2023",
     tag: "Security + Audit Automation",
     signals: ["79s ↓ per audit record", "50 reports in <90 min", "35 compliance deviations found"],
