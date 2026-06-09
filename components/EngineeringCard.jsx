@@ -1,9 +1,9 @@
 export default function EngineeringCard() {
   const stack = [
-    { name: "Frontend", tech: "Next.js + React", color: "bg-blue-100 text-blue-800" },
-    { name: "Backend", tech: "Node + FastAPI", color: "bg-purple-100 text-purple-800" },
-    { name: "Database", tech: "Postgres + Redis", color: "bg-emerald-100 text-emerald-800" },
-    { name: "Infra", tech: "AWS + Docker", color: "bg-orange-100 text-orange-800" },
+    { name: "Frontend", tech: "React.js + TypeScript + GraphQL", color: "bg-blue-100 text-blue-800" },
+    { name: "Backend", tech: "Java + Spring Boot + Node.js", color: "bg-purple-100 text-purple-800" },
+    { name: "Database", tech: "PostgreSQL + Redis + DynamoDB", color: "bg-emerald-100 text-emerald-800" },
+    { name: "Infra", tech: "AWS EKS + Docker + Kubernetes", color: "bg-orange-100 text-orange-800" },
   ];
 
   return (
@@ -17,7 +17,7 @@ export default function EngineeringCard() {
               ENGINEERING PROFILE
             </div>
             <div className="mt-1 text-lg font-bold text-slate-900">
-              System Builder
+              Full Stack Developer
             </div>
           </div>
 
@@ -45,9 +45,7 @@ export default function EngineeringCard() {
                 </div>
               </div>
 
-              <span
-                className={`rounded-full px-3 py-1 text-xs font-semibold ${item.color}`}
-              >
+              <span className={`rounded-full px-3 py-1 text-xs font-semibold ${item.color}`}>
                 Active
               </span>
             </div>
@@ -56,10 +54,10 @@ export default function EngineeringCard() {
 
         {/* Bottom metrics */}
         <div className="mt-6 grid grid-cols-2 gap-3">
-          <Metric label="p95 Latency" value="120ms" />
-          <Metric label="Uptime" value="99.95%" />
+          <Metric label="p95 Latency" value="38% faster" />
+          <Metric label="Uptime" value="99.97%" />
+          <Metric label="Throughput" value="15K+ TPS" />
           <Metric label="Deploy Flow" value="CI/CD" />
-          <Metric label="Ownership" value="End-to-End" />
         </div>
       </div>
     </div>

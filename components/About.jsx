@@ -2,27 +2,27 @@ import Container from "./Container";
 
 const METRICS = [
   {
-    label: "Performance",
-    value: "+35%",
-    desc: "API throughput improvement",
+    label: "Latency",
+    value: "38%",
+    desc: "API response improvement at CVS Health",
     accent: "from-blue-500/15 to-indigo-500/10",
   },
   {
-    label: "Automation",
-    value: "40%",
-    desc: "manual effort reduction",
+    label: "Reliability",
+    value: "99.97%",
+    desc: "uptime at 15K+ TPS on Kafka systems",
     accent: "from-emerald-500/15 to-teal-500/10",
   },
   {
-    label: "Infra",
-    value: "-25%",
-    desc: "cost reduction at scale",
+    label: "Automation",
+    value: "60%",
+    desc: "deployment effort reduced via CI/CD",
     accent: "from-violet-500/15 to-fuchsia-500/10",
   },
   {
-    label: "Reliability",
-    value: "-30%",
-    desc: "lower MTTR with CI/CD",
+    label: "MTTR",
+    value: "45%",
+    desc: "faster incident resolution with RAG + AI",
     accent: "from-orange-500/15 to-rose-500/10",
   },
 ];
@@ -36,12 +36,13 @@ const FOCUS = [
   "Performance Engineering",
   "Distributed Systems",
   "CI/CD",
+  "React.js",
+  "GraphQL",
 ];
 
 export default function About() {
   return (
     <section id="about" className="relative py-16 lg:py-20 overflow-hidden">
-      {/* Soft background glows */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-32 -left-24 h-[420px] w-[420px] rounded-full bg-blue-300/20 blur-3xl" />
         <div className="absolute top-20 -right-20 h-[380px] w-[380px] rounded-full bg-emerald-300/20 blur-3xl" />
@@ -50,13 +51,11 @@ export default function About() {
 
       <Container>
         <div className="relative">
-          {/* Heading Row */}
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
               <div className="text-xs tracking-[0.35em] text-slate-500 font-semibold">
                 ABOUT
               </div>
-
               <h2 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
                 I build{" "}
                 <span className="text-slate-900">production-grade</span>{" "}
@@ -66,25 +65,22 @@ export default function About() {
                 </span>
                 .
               </h2>
-
               <p className="mt-5 text-lg text-slate-600 leading-relaxed">
-                I’m a Software Engineer with 4+ years of experience building
-                cloud-native applications across fintech and SaaS. My work spans
-                microservices, event-driven systems, and AI-powered workflows —
-                with a strong focus on reliability, measurable performance, and
-                production-ready architecture.
+                I'm a Full Stack Developer with 3+ years of experience building
+                cloud-native applications across healthcare, fintech, and
+                e-commerce. My work spans microservices, event-driven systems,
+                and AI-powered workflows — with a strong focus on reliability,
+                measurable performance, and production-ready architecture.
               </p>
             </div>
-
             <div className="flex lg:justify-end">
               <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-sm text-slate-700 shadow-sm backdrop-blur">
                 <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                Open to Backend / AI Systems roles
+                Open to Full Stack / AI Systems roles
               </div>
             </div>
           </div>
 
-          {/* Metrics */}
           <div className="mt-10 rounded-3xl border border-slate-200 bg-white/70 backdrop-blur p-6 lg:p-7 card-premium">
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {METRICS.map((m) => (
@@ -109,12 +105,9 @@ export default function About() {
             </div>
           </div>
 
-          {/* Two-column cards */}
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            {/* HOW I WORK */}
             <div className="relative rounded-3xl border border-slate-200 bg-white/70 backdrop-blur p-7 card-premium overflow-hidden">
               <div className="pointer-events-none absolute -inset-16 bg-gradient-to-br from-blue-500/10 via-indigo-500/10 to-emerald-500/10 blur-2xl" />
-
               <div className="relative">
                 <div className="text-xs tracking-[0.35em] text-slate-500 font-semibold">
                   HOW I WORK
@@ -122,7 +115,6 @@ export default function About() {
                 <h3 className="mt-2 text-2xl font-extrabold text-slate-900">
                   Build for scale. Ship for production.
                 </h3>
-
                 <div className="mt-6 space-y-6">
                   <Step
                     n="01"
@@ -143,10 +135,8 @@ export default function About() {
               </div>
             </div>
 
-            {/* FOCUS AREAS */}
             <div className="relative rounded-3xl border border-slate-200 bg-white/70 backdrop-blur p-7 card-premium overflow-hidden">
               <div className="pointer-events-none absolute -inset-16 bg-gradient-to-br from-emerald-500/10 via-teal-500/10 to-indigo-500/10 blur-2xl" />
-
               <div className="relative">
                 <div className="text-xs tracking-[0.35em] text-slate-500 font-semibold">
                   FOCUS AREAS
@@ -154,18 +144,14 @@ export default function About() {
                 <h3 className="mt-2 text-2xl font-extrabold text-slate-900">
                   Core systems I like building
                 </h3>
-
                 <div className="mt-5 flex flex-wrap gap-2">
                   {FOCUS.map((tag) => (
                     <span
                       key={tag}
                       className="rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm font-semibold text-slate-700 hover:border-indigo-200 hover:text-slate-900 transition"
-                    >
-                      {tag}
-                    </span>
+                    >{tag}</span>
                   ))}
                 </div>
-
                 <div className="mt-6 rounded-2xl border border-slate-200 bg-white/80 p-5 card-premium">
                   <div className="text-xs tracking-[0.35em] text-slate-500 font-semibold">
                     NOW / NEXT
@@ -174,29 +160,19 @@ export default function About() {
                     <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500" />
                     <p className="text-slate-700 leading-relaxed">
                       <span className="font-bold">Now:</span> building scalable
-                      backend systems, RAG workflows, and real-time data
-                      pipelines across cloud-native environments.
+                      healthcare microservices, RAG-based AI pipelines, and
+                      real-time event-driven systems at CVS Health.
                       <br />
                       <span className="font-bold">Next:</span> deepening AI
                       systems engineering with stronger production monitoring,
-                      distributed infrastructure, and case-study driven builds.
+                      distributed infrastructure, and LLM-powered platform
+                      tooling.
                     </p>
                   </div>
                 </div>
-
                 <div className="mt-5 flex gap-3 flex-wrap">
-                  <a
-                    href="#projects"
-                    className="btn-pop rounded-full bg-indigo-600 px-5 py-2.5 text-white font-semibold shadow-sm"
-                  >
-                    View Projects →
-                  </a>
-                  <a
-                    href="#contact"
-                    className="btn-pop rounded-full border border-slate-200 bg-white/80 px-5 py-2.5 text-slate-900 font-semibold backdrop-blur"
-                  >
-                    Contact
-                  </a>
+                  <a href="#projects" className="btn-pop rounded-full bg-indigo-600 px-5 py-2.5 text-white font-semibold shadow-sm">View Projects</a>
+                  <a href="#contact" className="btn-pop rounded-full border border-slate-200 bg-white/80 px-5 py-2.5 text-slate-900 font-semibold backdrop-blur">Contact</a>
                 </div>
               </div>
             </div>
@@ -218,7 +194,6 @@ function Step({ n, title, desc }) {
         </div>
         <div className="mt-3 h-full w-px bg-slate-200" />
       </div>
-
       <div>
         <div className="text-lg font-extrabold text-slate-900">{title}</div>
         <div className="mt-1 text-slate-600 leading-relaxed">{desc}</div>

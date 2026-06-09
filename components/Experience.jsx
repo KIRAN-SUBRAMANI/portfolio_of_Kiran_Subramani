@@ -2,46 +2,49 @@ import Container from "./Container";
 
 const experiences = [
   {
-    role: "Front-End Developer",
-    company: "Yosi Innovation Private Ltd • IISc, India",
-    period: "Jun 2023 – Nov 2023",
-    tag: "React + IoT Focus",
-    signals: ["280 hrs ↓ manual entry", "17→6 UI errors/build", "<0.25s obstacle latency"],
+    role: "Full Stack Developer",
+    company: "CVS Health • USA",
+    period: "Jan 2026 – Present",
+    tag: "Healthcare & AI",
+    signals: ["38% ↓ API latency", "45% ↓ MTTR", "15K+ TPS @ 99.97% uptime"],
     bullets: [
-      "Promoted from intern after delivering three deployable IoT prototypes for MedTech incubation programs at IISc.",
-      "Built a React + TypeScript vendor-management portal that automated procurement workflows, cutting manual data entry by 280 hours per quarter and synchronizing information across four departments.",
-      "Designed reusable React components that reduced UI validation errors from 17 to 6 per build cycle, improving release reliability.",
-      "Engineered a Smart Walking Stick integrating GPS, ESP32, and cloud analytics to assist visually impaired users, achieving obstacle-detection latency under 0.25 seconds during field testing.",
+      "Architected scalable healthcare microservices using Java, Spring Boot, Kafka, and AWS EKS, modernizing claims and patient workflow systems for 2M+ healthcare members.",
+      "Engineered AI-assisted incident analysis pipelines using OpenAI APIs and RAG-based intelligent root-cause detection, decreasing MTTR by 45% for cloud operations teams.",
+      "Developed responsive provider and member-facing applications using React.js, TypeScript, GraphQL, and Node.js, increasing user engagement scores by 28%.",
+      "Implemented distributed event-driven architectures with Kafka and Redis processing 15K+ TPS with 99.97% application uptime.",
+      "Automated CI/CD and cloud-native deployments using Jenkins, AWS Lambda, and CloudFormation, reducing production deployment effort by 60%.",
     ],
-    stack: ["React.js", "TypeScript", "ESP32", "GPS", "Cloud Analytics", "IoT"],
+    stack: ["Java", "Spring Boot", "React.js", "TypeScript", "Kafka", "AWS EKS", "Docker", "Kubernetes", "GraphQL", "OpenAI APIs", "RAG"],
   },
   {
-    role: "Front-End Developer Intern",
-    company: "Yosi Innovation Private Ltd • IISc, India",
-    period: "Sep 2022 – May 2023",
-    tag: "Security + Audit Automation",
-    signals: ["79s ↓ per audit record", "50 reports in <90 min", "35 compliance deviations found"],
+    role: "Full Stack Software Developer",
+    company: "Lenskart • India",
+    period: "Jun 2022 – Dec 2023",
+    tag: "E-Commerce & DevOps",
+    signals: ["35% ↑ checkout speed", "25% ↓ page load time", "40% ↓ stock mismatch"],
     bullets: [
-      "Designed an automated VB.NET + Excel risk-assessment system for critical banking infrastructure, reducing audit cycle time by 79 seconds per record and improving throughput across 2,000 records per audit.",
-      "Created an interactive UI workflow to rank high-risk vulnerabilities, processing 50 reports in under 90 minutes instead of 150, improving review turnaround.",
-      "Conducted security-control gap analyses across 12 systems, documenting 35 compliance deviations and drafting remediation plans.",
-      "Delivered a live prototype demo to 50 Ernst & Young executives, securing adoption of the audit-automation methodology within two partner institutions.",
+      "Designed and developed scalable e-commerce microservices using Java, Spring Boot, MySQL, and REST APIs, improving checkout performance by 35% for online customers.",
+      "Built dynamic frontend modules using Angular, JavaScript, and GraphQL, reducing page load time by 25% and enhancing personalized shopping experiences.",
+      "Integrated Kafka-based async event processing and Redis caching for real-time inventory synchronization, reducing stock mismatch incidents by 40%.",
+      "Containerized and deployed cloud-native applications using Docker, Kubernetes, Jenkins, and AWS EC2, reducing infrastructure provisioning time from hours to minutes.",
+      "Achieved 85% test coverage and reduced production defects by 30% through Agile QA practices with JUnit, Mockito, and Selenium.",
     ],
-    stack: ["VB.NET", "Excel", "UI/UX", "Security Analysis", "Compliance"],
+    stack: ["Java", "Spring Boot", "Angular", "JavaScript", "GraphQL", "Kafka", "Redis", "Docker", "Kubernetes", "AWS EC2", "MySQL"],
   },
   {
-    role: "Full Stack Developer Intern",
-    company: "Greet Labs Pvt Ltd • Bengaluru, India",
-    period: "Feb 2023 – Apr 2023",
-    tag: "MERN + DevOps",
-    signals: ["40% ↓ unauthorized access", "200ms→150ms API latency", "100% on-time delivery"],
+    role: "Software Developer",
+    company: "BharatPe • Remote, India",
+    period: "May 2021 – May 2022",
+    tag: "Fintech & Payments",
+    signals: ["22% ↓ transaction latency", "40% ↓ unauthorized access", "85% test coverage"],
     bullets: [
-      "Implemented and deployed a full-stack MERN e-commerce platform that accelerated checkout speed by 79 seconds per transaction and improved user engagement across 1,500+ sessions.",
-      "Strengthened backend security by implementing RBAC and JWT-based authentication, reducing unauthorized access attempts by 40% while ensuring encrypted, authorized data exchange.",
-      "Refactored MongoDB queries and Node.js APIs, cutting average API latency from 200ms to 150ms and enhancing scalability under load testing with 10k+ concurrent users.",
-      "Automated CI/CD workflows via GitHub Actions and Jenkins, achieving 100% on-time sprint delivery and reducing manual deployment effort by 3 hours per cycle.",
+      "Developed secure payment processing APIs using Java, Spring Boot, SQL, and Node.js, supporting merchant onboarding and UPI transaction workflows for thousands of small businesses.",
+      "Reduced transaction processing latency by 22% by refactoring high-performance validation modules using C++ and multithreading techniques.",
+      "Built React.js merchant dashboards providing real-time payment insights and transaction monitoring for business stakeholders.",
+      "Implemented cloud-based monitoring and logging using AWS CloudWatch and Jenkins CI/CD pipelines, improving production stability across distributed systems.",
+      "Optimized MySQL and Redis for high-throughput fintech transactions, improving scalability during peak payment traffic events.",
     ],
-    stack: ["MongoDB", "Express", "React.js", "Node.js", "JWT", "RBAC", "GitHub Actions", "Jenkins", "Docker"],
+    stack: ["Java", "Spring Boot", "Node.js", "React.js", "C++", "MySQL", "Redis", "AWS CloudWatch", "Jenkins", "Docker"],
   },
 ];
 
@@ -126,12 +129,13 @@ export default function Experience() {
               Results-driven engineering work.
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              Highlights emphasize measurable outcomes: performance, security,
-              automation, and clean UI systems.
+              Highlights emphasize measurable outcomes across healthcare,
+              fintech, and e-commerce: latency, reliability, and AI-driven
+              automation.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              {["React", "Full Stack", "IoT", "Security", "DevOps"].map(
+              {["Java", "Spring Boot", "React", "AWS", "Kafka", "AI/ML"].map(
                 (x) => (
                   <Pill key={x}>{x}</Pill>
                 )

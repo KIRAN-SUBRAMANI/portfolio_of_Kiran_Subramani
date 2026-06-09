@@ -88,7 +88,7 @@ export default function TopNav() {
                 <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-indigo-500 to-emerald-500 transition-all group-hover:w-full" />
               </span>
               <span className="hidden text-xs font-semibold text-slate-500 md:inline">
-                • SWE
+                • Full Stack Dev
               </span>
             </button>
 

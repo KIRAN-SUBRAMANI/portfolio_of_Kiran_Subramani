@@ -2,12 +2,12 @@ import Container from "./Container";
 
 const education = [
   {
-    range: "2024 - 2025",
+    range: "2023 - 2025",
     degree: "M.S. INFORMATION SYSTEM TECHNOLOGIES",
-    school: "Wilmington University • USA",
+    school: "Wilmington University • Delaware, USA",
     subtitle: "Specialization: Cloud Systems & AI Engineering",
-    gpaLabel: "GPA",
-    gpaValue: "3.7/4.0",
+    gpaLabel: "Graduated",
+    gpaValue: "Dec 2025",
     logoSrc: "/wilmington.png",
   },
 ];
@@ -107,7 +107,6 @@ export default function Education() {
                           {item.gpaLabel}: {item.gpaValue}
                         </div>
 
-                        {/* Extra highlight */}
                         <div className="mt-2 text-white/50 text-sm">
                           Focus: Distributed Systems • Cloud • AI Systems
                         </div>

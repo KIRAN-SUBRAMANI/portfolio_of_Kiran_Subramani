@@ -27,6 +27,8 @@ const skills = [
   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   { name: "SQL", short: "SQL", color: "#6B7280" },
+  { name: "Kotlin", short: "KT", color: "#7F52FF" },
+  { name: "Go", short: "Go", color: "#00ADD8" },
 
   { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F" },
   { name: "Node.js", icon: SiNodedotjs, color: "#3C873A" },
@@ -35,11 +37,12 @@ const skills = [
 
   { name: "Microservices", short: "MS", color: "#0F172A" },
   { name: "REST APIs", short: "API", color: "#2563EB" },
+  { name: "GraphQL", short: "GQL", color: "#E10098" },
   { name: "Distributed Systems", short: "DS", color: "#7C3AED" },
 
   { name: "RAG", short: "RAG", color: "#10B981" },
   { name: "LLMs", short: "LLM", color: "#8B5CF6" },
-  { name: "Prompt Eng", short: "PE", color: "#F59E0B" },
+  { name: "OpenAI APIs", short: "AI", color: "#F59E0B" },
 
   { name: "Kafka", icon: SiApachekafka, color: "#FFFFFF" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
@@ -59,19 +62,16 @@ export default function Skills() {
   return (
     <section id="skills" className="relative py-16 scroll-mt-24">
       <Container>
-        {/* Title */}
         <div className="mb-10 flex items-center justify-center">
           <div className="skill-title-line" />
           <div className="skill-title-pill">Skills</div>
           <div className="skill-title-line" />
         </div>
 
-        {/* Marquee */}
         <div className="skill-marquee-wrap">
           <div className="skill-marquee-track">
             {[...skills, ...skills].map((s, i) => {
               const Icon = s.icon;
-
               return (
                 <div className="skill-card" key={`${s.name}-${i}`}>
                   <div className="skill-card-inner">
@@ -85,12 +85,9 @@ export default function Skills() {
                       {Icon ? (
                         <Icon />
                       ) : (
-                        <span className="text-sm font-bold">
-                          {s.short}
-                        </span>
+                        <span className="text-sm font-bold">{s.short}</span>
                       )}
                     </div>
-
                     <div className="skill-name">{s.name}</div>
                   </div>
                 </div>
