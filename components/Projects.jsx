@@ -2,47 +2,43 @@ import Container from "./Container";
 
 const projects = [
   {
-    title: "AI-Assisted Incident Analysis Pipeline — CVS Health",
-    tag: "AI Systems + RAG",
-    signals: ["45% MTTR reduction", "OpenAI + RAG", "Production scale"],
+    title: "Enterprise AI Copilot Platform — Wells Fargo",
+    tag: "Generative AI + RAG",
+    signals: ["Policy automation", "Contract analysis", "LangGraph agents"],
     bullets: [
-      "Engineered AI-assisted incident analysis pipelines using OpenAI APIs, Python, and Retrieval-Augmented Generation (RAG) to automate production log investigation and intelligent root-cause detection.",
-      "Decreased MTTR by 45% for cloud operations teams by replacing manual log triage with intelligent automated analysis.",
-      "Integrated with AWS CloudWatch and distributed tracing tools to feed real-time signals into the RAG pipeline.",
+      "Developed Generative AI solutions using OpenAI GPT, Anthropic Claude, LangChain, LangGraph, and CrewAI — building intelligent enterprise assistants that automate policy interpretation, contract analysis, and operational decision-making.",
+      "Implemented RAG frameworks with Pinecone and Weaviate vector databases to enable intelligent document retrieval and context-aware AI responses across enterprise knowledge bases.",
+      "Built machine learning pipelines using Python, PyTorch, and Scikit-learn to identify subscription churn risks, detect payment anomalies, and generate actionable business insights from LLM embeddings.",
     ],
-    stack: ["Python", "OpenAI APIs", "RAG", "AWS CloudWatch", "LLMs", "Spring Boot"],
-    repo: "#",
-    live: "#",
+    stack: ["OpenAI GPT", "Anthropic Claude", "LangChain", "LangGraph", "CrewAI", "RAG", "Pinecone", "Weaviate", "Python", "PyTorch"],
   },
   {
-    title: "Healthcare Microservices Platform — CVS Health",
-    tag: "Microservices + Kafka",
-    signals: ["38% latency reduction", "15K+ TPS", "99.97% uptime"],
+    title: "Device Subscription & Order Management Platform — Wells Fargo",
+    tag: "Microservices + Event-Driven",
+    signals: ["Global markets", "15K+ TPS", "99.97% uptime"],
     bullets: [
-      "Architected scalable healthcare microservices using Java, Spring Boot, Kafka, and AWS EKS to modernize claims and patient workflow systems for 2M+ healthcare members.",
-      "Implemented distributed event-driven architectures with Kafka and Redis to process high-volume healthcare transactions and real-time notifications at 15K+ TPS.",
-      "Automated CI/CD and cloud-native deployments using Jenkins, AWS Lambda, and CloudFormation, reducing production deployment effort by 60%.",
+      "Architected enterprise-scale device subscription and order management platforms using Java 17, Spring Boot, Angular, REST APIs, Redis, and AWS, supporting commercial leasing and fulfillment operations across multiple global markets.",
+      "Engineered event-driven architectures leveraging Solace Pub/Sub, MuleSoft integration, SAP S/4HANA FICA, and EZLease systems, enabling real-time orchestration of billing, payments, device upgrades, and financial reconciliations.",
+      "Designed resilient cloud-native microservices using Spring Cloud, Eureka, Consul, Docker, Kubernetes, AWS CloudWatch, and X-Ray — sustaining thousands of concurrent API requests under high-volume workloads.",
     ],
-    stack: ["Java", "Spring Boot", "Kafka", "AWS EKS", "Redis", "Docker", "Kubernetes", "Jenkins"],
-    repo: "#",
-    live: "#",
+    stack: ["Java 17", "Spring Boot", "Angular", "Solace Pub/Sub", "MuleSoft", "SAP S/4HANA", "Redis", "AWS", "Docker", "Kubernetes"],
   },
   {
-    title: "E-Commerce Microservices Platform — Lenskart",
-    tag: "Full Stack + DevOps",
-    signals: ["35% faster checkout", "25% load time reduction", "85% test coverage"],
+    title: "Enterprise Order-to-Cash Automation — Accenture",
+    tag: "SAP Integration + Full Stack",
+    signals: ["30% ↓ billing delays", "25% ↓ release cycle", "ETL dashboards"],
     bullets: [
-      "Designed and developed scalable e-commerce microservices using Java, Spring Boot, MySQL, and REST APIs, improving checkout performance by 35% for online customers.",
-      "Built dynamic frontend modules using Angular, JavaScript, and GraphQL, reducing page load time by 25% and enhancing personalized shopping experiences.",
-      "Integrated Kafka-based async event processing and Redis caching for real-time inventory synchronization, reducing stock mismatch incidents by 40%.",
+      "Developed enterprise applications integrating SAP SD and billing systems with Java Spring Boot services to automate pricing and order-to-cash workflows for enterprise retail and manufacturing clients.",
+      "Built RESTful APIs and middleware services using Java, Spring, and Node.js to connect SAP backends with modern web applications and partner platforms, enabling scalable business integrations.",
+      "Implemented microservice components and asynchronous job processing using Kafka and Redis queues, reducing transaction processing delays by 30%, with CI/CD via Jenkins and GitLab cutting release cycles by 25%.",
     ],
-    stack: ["Java", "Spring Boot", "Angular", "GraphQL", "Kafka", "Redis", "Docker", "Kubernetes", "MySQL"],
+    stack: ["Java", "Spring Boot", "SAP SD", "Node.js", "Angular", "Kafka", "Redis", "PostgreSQL", "Jenkins", "Docker", "Python"],
   },
 ];
 
 const PROJECT_TAGS = [
+  "Generative AI",
   "Microservices",
-  "AI / RAG",
   "Kafka Pipelines",
   "Cloud & DevOps",
   "Full Stack",
@@ -76,19 +72,14 @@ function ProjectCard({ p, i }) {
     >
       <div className="pointer-events-none absolute inset-0 opacity-80 project-glow" />
       <div className="relative p-6 sm:p-7">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-slate-900 px-4 py-1.5 text-xs font-extrabold text-white">{p.tag}</span>
-            <span className="text-xs font-bold text-slate-500">{p.period}</span>
-          </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="rounded-full bg-slate-900 px-4 py-1.5 text-xs font-extrabold text-white">{p.tag}</span>
         </div>
 
         <h3 className="mt-5 text-2xl sm:text-3xl font-black tracking-tight text-slate-900">{p.title}</h3>
 
         <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {p.signals.map((s) => (
-            <SignalBox key={s} value={s} />
-          ))}
+          {p.signals.map((s) => <SignalBox key={s} value={s} />)}
         </div>
 
         <ul className="mt-5 space-y-3 text-sm text-slate-700">
@@ -101,9 +92,7 @@ function ProjectCard({ p, i }) {
         </ul>
 
         <div className="mt-5 flex flex-wrap gap-2">
-          {p.stack.map((t) => (
-            <Pill key={t}>{t}</Pill>
-          ))}
+          {p.stack.map((t) => <Pill key={t}>{t}</Pill>)}
         </div>
       </div>
     </article>
@@ -118,16 +107,14 @@ export default function Projects() {
           <div className="lg:sticky lg:top-24">
             <div className="text-xs tracking-[0.35em] font-extrabold text-slate-500">PROJECTS</div>
             <h2 className="mt-3 text-4xl sm:text-5xl font-black tracking-tight text-slate-900">Built with engineering discipline.</h2>
-            <p className="mt-2 text-lg font-semibold text-slate-600">Real systems, cleaner architecture, measurable outcomes.</p>
+            <p className="mt-2 text-lg font-semibold text-slate-600">Real systems, production-grade architecture, measurable outcomes.</p>
             <p className="mt-6 text-slate-600 leading-relaxed">
               These projects reflect how I build software: performance-minded,
-              production-aware, and focused on clear system design across
-              healthcare, fintech, and e-commerce domains.
+              AI-augmented, and focused on clear system design across enterprise
+              finance, e-commerce, and distributed platform domains.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
-              {PROJECT_TAGS.map((x) => (
-                <Pill key={x}>{x}</Pill>
-              ))}
+              {PROJECT_TAGS.map((x) => <Pill key={x}>{x}</Pill>)}
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <LinkBtn href="https://github.com/KIRAN-SUBRAMANI" solid>View GitHub</LinkBtn>

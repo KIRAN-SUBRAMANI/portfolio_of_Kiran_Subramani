@@ -3,48 +3,51 @@ import Container from "./Container";
 const experiences = [
   {
     role: "Full Stack Developer",
-    company: "CVS Health • USA",
+    company: "Wells Fargo • USA",
     period: "Jan 2026 – Present",
-    tag: "Healthcare & AI",
-    signals: ["38% ↓ API latency", "45% ↓ MTTR", "15K+ TPS @ 99.97% uptime"],
+    tag: "Enterprise & AI",
+    signals: ["GenAI Copilots Deployed", "15K+ TPS @ 99.97%", "60% CI/CD Savings"],
     bullets: [
-      "Architected scalable healthcare microservices using Java, Spring Boot, Kafka, and AWS EKS, modernizing claims and patient workflow systems for 2M+ healthcare members.",
-      "Engineered AI-assisted incident analysis pipelines using OpenAI APIs and RAG-based intelligent root-cause detection, decreasing MTTR by 45% for cloud operations teams.",
-      "Developed responsive provider and member-facing applications using React.js, TypeScript, GraphQL, and Node.js, increasing user engagement scores by 28%.",
-      "Implemented distributed event-driven architectures with Kafka and Redis processing 15K+ TPS with 99.97% application uptime.",
-      "Automated CI/CD and cloud-native deployments using Jenkins, AWS Lambda, and CloudFormation, reducing production deployment effort by 60%.",
+      "Architected enterprise-scale device subscription and order management platforms using Java 17, Spring Boot, Microservices, Angular, REST APIs, Redis, and AWS, streamlining commercial leasing and fulfillment operations across multiple global markets.",
+      "Engineered event-driven architectures leveraging Solace Pub/Sub, MuleSoft, SAP S/4HANA FICA, and EZLease systems enabling real-time orchestration of billing, payments, device upgrades, subscription activations, cancellations, and financial reconciliations.",
+      "Developed and deployed Generative AI solutions using OpenAI GPT, Anthropic Claude, LangChain, LangGraph, CrewAI, RAG frameworks, Pinecone, and Weaviate — building intelligent enterprise assistants and AI copilots for policy interpretation, contract analysis, and customer support.",
+      "Built machine learning and predictive analytics pipelines using Python, PyTorch, Scikit-learn, and LLM embeddings to identify subscription churn risks, detect payment anomalies, and generate actionable business insights.",
+      "Designed resilient cloud-native microservices with Spring Cloud, Eureka, Consul, Docker, Kubernetes, AWS CloudWatch, and AWS X-Ray — sustaining thousands of concurrent API requests under high-volume event processing workloads.",
+      "Automated end-to-end CI/CD and DevOps workflows using GitHub Actions, Flyway, Docker, Kubernetes, and Datadog — reducing MTTR and maintaining high availability for mission-critical enterprise applications.",
     ],
-    stack: ["Java", "Spring Boot", "React.js", "TypeScript", "Kafka", "AWS EKS", "Docker", "Kubernetes", "GraphQL", "OpenAI APIs", "RAG"],
+    stack: ["Java 17", "Spring Boot", "Angular", "Solace Pub/Sub", "MuleSoft", "SAP S/4HANA", "OpenAI GPT", "LangChain", "LangGraph", "RAG", "Pinecone", "Weaviate", "AWS", "Docker", "Kubernetes"],
   },
   {
     role: "Full Stack Software Developer",
-    company: "Lenskart • India",
+    company: "Accenture • India",
     period: "Jun 2022 – Dec 2023",
-    tag: "E-Commerce & DevOps",
-    signals: ["35% ↑ checkout speed", "25% ↓ page load time", "40% ↓ stock mismatch"],
+    tag: "Enterprise & DevOps",
+    signals: ["30% ↓ billing delays", "25% ↓ release cycle", "ETL dashboards"],
     bullets: [
-      "Designed and developed scalable e-commerce microservices using Java, Spring Boot, MySQL, and REST APIs, improving checkout performance by 35% for online customers.",
-      "Built dynamic frontend modules using Angular, JavaScript, and GraphQL, reducing page load time by 25% and enhancing personalized shopping experiences.",
-      "Integrated Kafka-based async event processing and Redis caching for real-time inventory synchronization, reducing stock mismatch incidents by 40%.",
-      "Containerized and deployed cloud-native applications using Docker, Kubernetes, Jenkins, and AWS EC2, reducing infrastructure provisioning time from hours to minutes.",
-      "Achieved 85% test coverage and reduced production defects by 30% through Agile QA practices with JUnit, Mockito, and Selenium.",
+      "Developed enterprise applications integrating SAP SD and billing systems with Java Spring Boot services, automating pricing and order-to-cash workflows for enterprise retail and manufacturing clients.",
+      "Built RESTful APIs and middleware services using Java, Spring, and Node.js to connect SAP backend systems with modern web applications and partner platforms.",
+      "Designed data pipelines and reporting services using SQL, Python, and ETL frameworks to generate operational dashboards and financial reports for business intelligence and executive stakeholders.",
+      "Implemented microservice components and asynchronous job processing using Kafka and Redis queues, reducing transaction processing delays by 30%.",
+      "Enhanced frontend applications using Angular, JavaScript, and TypeScript to build internal dashboards for pricing and billing workflows.",
+      "Automated CI/CD workflows using Jenkins, GitLab pipelines, and Docker — reducing release cycle time by 25%.",
     ],
-    stack: ["Java", "Spring Boot", "Angular", "JavaScript", "GraphQL", "Kafka", "Redis", "Docker", "Kubernetes", "AWS EC2", "MySQL"],
+    stack: ["Java", "Spring Boot", "SAP SD", "Node.js", "Angular", "TypeScript", "Kafka", "Redis", "PostgreSQL", "SQL Server", "Jenkins", "Docker", "Python"],
   },
   {
-    role: "Software Developer",
-    company: "BharatPe • Remote, India",
+    role: "Software Engineer",
+    company: "Flipkart • Remote, India",
     period: "May 2021 – May 2022",
-    tag: "Fintech & Payments",
-    signals: ["22% ↓ transaction latency", "40% ↓ unauthorized access", "85% test coverage"],
+    tag: "E-Commerce & Backend",
+    signals: ["20% perf improvement", "High-vol marketplace", "Payment APIs"],
     bullets: [
-      "Developed secure payment processing APIs using Java, Spring Boot, SQL, and Node.js, supporting merchant onboarding and UPI transaction workflows for thousands of small businesses.",
-      "Reduced transaction processing latency by 22% by refactoring high-performance validation modules using C++ and multithreading techniques.",
-      "Built React.js merchant dashboards providing real-time payment insights and transaction monitoring for business stakeholders.",
-      "Implemented cloud-based monitoring and logging using AWS CloudWatch and Jenkins CI/CD pipelines, improving production stability across distributed systems.",
-      "Optimized MySQL and Redis for high-throughput fintech transactions, improving scalability during peak payment traffic events.",
+      "Assisted in developing backend services using Java, Spring, and REST APIs, contributing to order processing and inventory management modules for Flipkart's high-volume e-commerce platform.",
+      "Contributed to microservice components and event-processing pipelines using Python and Kafka, enabling reliable handling of product catalog updates and order events across distributed systems.",
+      "Optimized memory management and implemented multithreading with C++ Standard Library, improving application performance by 20%.",
+      "Developed frontend components using ReactJS, JavaScript, and Redux, improving seller dashboard usability and enabling merchants to track inventory and order fulfillment more efficiently.",
+      "Integrated external payment gateway and logistics APIs, automating order lifecycle workflows from checkout to shipment tracking.",
+      "Built internal data analysis scripts using Python and SQL, generating reports on seller performance and product demand trends.",
     ],
-    stack: ["Java", "Spring Boot", "Node.js", "React.js", "C++", "MySQL", "Redis", "AWS CloudWatch", "Jenkins", "Docker"],
+    stack: ["Java", "Spring", "Python", "Kafka", "ReactJS", "Redux", "JavaScript", "C++", "MySQL", "MongoDB", "REST APIs"],
   },
 ];
 
@@ -59,9 +62,7 @@ function Pill({ children }) {
 function SignalBox({ value }) {
   return (
     <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-3 shadow-sm">
-      <div className="text-[11px] font-extrabold tracking-[0.28em] text-slate-500">
-        SIGNAL
-      </div>
+      <div className="text-[11px] font-extrabold tracking-[0.28em] text-slate-500">SIGNAL</div>
       <div className="mt-1 text-sm font-black text-slate-900">{value}</div>
     </div>
   );
@@ -74,26 +75,19 @@ function ExperienceCard({ e, i }) {
       style={{ "--stackY": `${i * 22}px` }}
     >
       <div className="pointer-events-none absolute inset-0 opacity-80 exp-glow" />
-
       <div className="relative p-6 sm:p-7">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-slate-900 px-4 py-1.5 text-xs font-extrabold text-white">
-              {e.tag}
-            </span>
+            <span className="rounded-full bg-slate-900 px-4 py-1.5 text-xs font-extrabold text-white">{e.tag}</span>
             <span className="text-xs font-bold text-slate-500">{e.period}</span>
           </div>
         </div>
 
-        <h3 className="mt-5 text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
-          {e.role}
-        </h3>
+        <h3 className="mt-5 text-2xl sm:text-3xl font-black tracking-tight text-slate-900">{e.role}</h3>
         <p className="mt-1 text-sm font-semibold text-slate-600">{e.company}</p>
 
         <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {e.signals.map((s) => (
-            <SignalBox key={s} value={s} />
-          ))}
+          {e.signals.map((s) => <SignalBox key={s} value={s} />)}
         </div>
 
         <ul className="mt-5 space-y-3 text-sm text-slate-700">
@@ -106,9 +100,7 @@ function ExperienceCard({ e, i }) {
         </ul>
 
         <div className="mt-5 flex flex-wrap gap-2">
-          {e.stack.map((t) => (
-            <Pill key={t}>{t}</Pill>
-          ))}
+          {e.stack.map((t) => <Pill key={t}>{t}</Pill>)}
         </div>
       </div>
     </article>
@@ -120,30 +112,17 @@ export default function Experience() {
     <section id="experience" className="relative py-14 sm:py-16">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 items-start">
-          {/* LEFT (static) */}
           <div className="lg:sticky lg:top-24">
-            <div className="text-xs tracking-[0.35em] font-extrabold text-slate-500">
-              EXPERIENCE
-            </div>
-            <h2 className="mt-3 text-4xl sm:text-5xl font-black tracking-tight text-slate-900">
-              Results-driven engineering work.
-            </h2>
+            <div className="text-xs tracking-[0.35em] font-extrabold text-slate-500">EXPERIENCE</div>
+            <h2 className="mt-3 text-4xl sm:text-5xl font-black tracking-tight text-slate-900">Results-driven engineering work.</h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              Highlights emphasize measurable outcomes across healthcare,
-              fintech, and e-commerce: latency, reliability, and AI-driven
-              automation.
+              4+ years building enterprise-scale systems across finance, e-commerce, and enterprise services — with measurable impact on performance, reliability, and AI automation.
             </p>
-
             <div className="mt-6 flex flex-wrap gap-2">
-              {["Java", "Spring Boot", "React", "AWS", "Kafka", "AI/ML"].map(
-                (x) => (
-                  <Pill key={x}>{x}</Pill>
-                )
-              )}
+              {["Java", "Spring Boot", "React", "AWS", "Kafka", "GenAI"].map((x) => <Pill key={x}>{x}</Pill>)}
             </div>
           </div>
 
-          {/* RIGHT (stacked sticky cards) */}
           <div className="exp-stack-wrap">
             {experiences.map((e, i) => (
               <div key={e.role + e.period} className="exp-stack-item">

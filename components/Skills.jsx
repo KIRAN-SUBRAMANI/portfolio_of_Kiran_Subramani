@@ -17,7 +17,9 @@ import {
   SiJenkins,
   SiGithub,
   SiApachekafka,
-  SiAmazon,
+  SiAmazonwebservices,
+  SiDatadog,
+  SiPytorch,
 } from "react-icons/si";
 
 const skills = [
@@ -27,35 +29,40 @@ const skills = [
   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   { name: "SQL", short: "SQL", color: "#6B7280" },
-  { name: "Kotlin", short: "KT", color: "#7F52FF" },
-  { name: "Go", short: "Go", color: "#00ADD8" },
 
   { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F" },
   { name: "Node.js", icon: SiNodedotjs, color: "#3C873A" },
-  { name: "React", icon: SiReact, color: "#61DAFB" },
+  { name: "React.js", icon: SiReact, color: "#61DAFB" },
   { name: "Angular", icon: SiAngular, color: "#DD0031" },
 
   { name: "Microservices", short: "MS", color: "#0F172A" },
   { name: "REST APIs", short: "API", color: "#2563EB" },
-  { name: "GraphQL", short: "GQL", color: "#E10098" },
   { name: "Distributed Systems", short: "DS", color: "#7C3AED" },
 
-  { name: "RAG", short: "RAG", color: "#10B981" },
   { name: "LLMs", short: "LLM", color: "#8B5CF6" },
-  { name: "OpenAI APIs", short: "AI", color: "#F59E0B" },
+  { name: "RAG", short: "RAG", color: "#10B981" },
+  { name: "LangChain", short: "LC", color: "#1C3A5A" },
+  { name: "LangGraph", short: "LG", color: "#6366F1" },
+  { name: "CrewAI", short: "CR", color: "#F59E0B" },
+  { name: "OpenAI APIs", short: "OAI", color: "#412991" },
+  { name: "PyTorch", icon: SiPytorch, color: "#EE4C2C" },
 
   { name: "Kafka", icon: SiApachekafka, color: "#FFFFFF" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
   { name: "MySQL", icon: SiMysql, color: "#4479A1" },
   { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
   { name: "Redis", icon: SiRedis, color: "#DC382D" },
+  { name: "Pinecone", short: "PIN", color: "#1B7F4E" },
+  { name: "Weaviate", short: "WEV", color: "#3DDC84" },
 
-  { name: "AWS", icon: SiAmazon, color: "#FF9900" },
+  { name: "AWS", icon: SiAmazonwebservices, color: "#FF9900" },
+  { name: "Azure", short: "Az", color: "#0089D6" },
   { name: "Docker", icon: SiDocker, color: "#2496ED" },
   { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
   { name: "Jenkins", icon: SiJenkins, color: "#D24939" },
-  { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
-  { name: "CI/CD", short: "CI", color: "#0EA5E9" },
+  { name: "GitHub Actions", icon: SiGithub, color: "#FFFFFF" },
+  { name: "Datadog", icon: SiDatadog, color: "#632CA6" },
+  { name: "MuleSoft", short: "MS", color: "#00A1E0" },
 ];
 
 export default function Skills() {

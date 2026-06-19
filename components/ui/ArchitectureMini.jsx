@@ -3,21 +3,21 @@ export default function ArchitectureMini() {
     <div className="rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm backdrop-blur">
       <div className="flex items-center justify-between">
         <div className="text-sm font-semibold text-slate-900">System View</div>
-        <div className="text-xs font-medium text-slate-500">request → compute → data</div>
+        <div className="text-xs font-medium text-slate-500">client → api → events → data</div>
       </div>
 
       <div className="mt-4 grid grid-cols-3 items-center gap-3">
-        <Node title="Web" subtitle="Next.js UI" accent="indigo" />
+        <Node title="Angular" subtitle="Frontend UI" accent="indigo" />
         <Arrow />
-        <Node title="API" subtitle="Services + Auth" accent="violet" />
+        <Node title="Spring Boot" subtitle="Java 17 APIs" accent="violet" />
 
         <div className="col-span-3 my-1">
           <Pipeline />
         </div>
 
-        <Node title="Queue" subtitle="Jobs / ETL" accent="emerald" />
+        <Node title="Kafka" subtitle="Event Streaming" accent="emerald" />
         <Arrow />
-        <Node title="DB" subtitle="Postgres" accent="slate" />
+        <Node title="Redis + DB" subtitle="Cache + Postgres" accent="slate" />
       </div>
     </div>
   );

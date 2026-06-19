@@ -2,42 +2,42 @@ import Container from "./Container";
 
 const METRICS = [
   {
-    label: "Latency",
-    value: "38%",
-    desc: "API response improvement at CVS Health",
+    label: "Experience",
+    value: "4+ yrs",
+    desc: "Building scalable enterprise applications",
     accent: "from-blue-500/15 to-indigo-500/10",
   },
   {
     label: "Reliability",
     value: "99.97%",
-    desc: "uptime at 15K+ TPS on Kafka systems",
+    desc: "Uptime at 15K+ TPS on Kafka systems",
     accent: "from-emerald-500/15 to-teal-500/10",
   },
   {
     label: "Automation",
     value: "60%",
-    desc: "deployment effort reduced via CI/CD",
+    desc: "Deployment effort reduced via CI/CD",
     accent: "from-violet-500/15 to-fuchsia-500/10",
   },
   {
-    label: "MTTR",
-    value: "45%",
-    desc: "faster incident resolution with RAG + AI",
+    label: "GenAI",
+    value: "RAG + LLMs",
+    desc: "Enterprise AI copilots at Wells Fargo",
     accent: "from-orange-500/15 to-rose-500/10",
   },
 ];
 
 const FOCUS = [
   "Microservices",
-  "RAG Systems",
-  "Kafka Pipelines",
+  "Generative AI",
+  "RAG Pipelines",
+  "Kafka Streams",
   "Spring Boot",
   "AWS + Kubernetes",
-  "Performance Engineering",
+  "LangChain / LangGraph",
   "Distributed Systems",
   "CI/CD",
-  "React.js",
-  "GraphQL",
+  "React.js / Angular",
 ];
 
 export default function About() {
@@ -66,11 +66,13 @@ export default function About() {
                 .
               </h2>
               <p className="mt-5 text-lg text-slate-600 leading-relaxed">
-                I'm a Full Stack Developer with 3+ years of experience building
-                cloud-native applications across healthcare, fintech, and
-                e-commerce. My work spans microservices, event-driven systems,
+                I'm a Full Stack Developer with 4+ years of experience building
+                cloud-native enterprise applications across finance, e-commerce,
+                and retail. My work spans microservices, event-driven systems,
                 and AI-powered workflows — with a strong focus on reliability,
                 measurable performance, and production-ready architecture.
+                Currently at Wells Fargo building enterprise subscription
+                platforms and Generative AI copilots.
               </p>
             </div>
             <div className="flex lg:justify-end">
@@ -128,8 +130,8 @@ export default function About() {
                   />
                   <Step
                     n="03"
-                    title="Measure and improve"
-                    desc="Track performance, reliability, and operational outcomes — then iterate using real production signals."
+                    title="Automate and augment with AI"
+                    desc="Leverage Generative AI, RAG pipelines, and LLM-powered tooling to enhance operational efficiency and decision-making."
                   />
                 </div>
               </div>
@@ -159,14 +161,9 @@ export default function About() {
                   <div className="mt-3 flex items-start gap-3">
                     <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500" />
                     <p className="text-slate-700 leading-relaxed">
-                      <span className="font-bold">Now:</span> building scalable
-                      healthcare microservices, RAG-based AI pipelines, and
-                      real-time event-driven systems at CVS Health.
+                      <span className="font-bold">Now:</span> building enterprise subscription platforms, AI copilots with LangChain/LangGraph, and event-driven microservices at Wells Fargo.
                       <br />
-                      <span className="font-bold">Next:</span> deepening AI
-                      systems engineering with stronger production monitoring,
-                      distributed infrastructure, and LLM-powered platform
-                      tooling.
+                      <span className="font-bold">Next:</span> deepening AI systems engineering with stronger production monitoring, distributed infrastructure, and LLM-powered platform tooling.
                     </p>
                   </div>
                 </div>
